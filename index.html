@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 가을 행복 축제 전체 일정 (A4 인쇄용)</title>
+    <title>2025 가을 행축 일정표 (A4 인쇄용)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -45,6 +45,10 @@
         }
         .sun { color: #ef4444; }
         .sat { color: #3b82f6; }
+        .month-start {
+            font-weight: 700; /* Bold */
+            font-size: 0.9rem !important; /* Larger font size */
+        }
 
         @media print {
             body {
@@ -64,12 +68,21 @@
     <div class="max-w-4xl mx-auto bg-white p-4 rounded-lg shadow-lg printable-container">
         
         <div class="text-center mb-4">
-            <h1 class="text-xl font-bold text-gray-900">2025 가을 행축 캘린더</h1>
+            <h1 class="text-xl font-bold text-gray-900">2025 가을 행축 일정표</h1>
         </div>
 
-        <!-- 9월 -->
-        <div class="mb-4">
-            <h2 class="text-lg font-bold mb-2 text-center">📅 9월: 시작과 결단</h2>
+        <!-- 범례 (Legend) -->
+        <div class="flex flex-wrap justify-center gap-x-3 gap-y-1 mb-4 text-xs">
+            <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-blue-200 mr-1.5"></span>선포/진군식</div>
+            <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-green-200 mr-1.5"></span>태신자 작정</div>
+            <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-red-200 mr-1.5"></span>릴레이 금식 기도</div>
+            <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-yellow-200 mr-1.5"></span>문화행축</div>
+            <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-purple-200 mr-1.5"></span>행복파티</div>
+            <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-teal-200 mr-1.5"></span>후속조치</div>
+        </div>
+
+        <!-- 통합 캘린더 -->
+        <div>
             <table class="calendar-table">
                 <thead>
                     <tr>
@@ -77,9 +90,10 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- 9월 시작 -->
                     <tr>
                         <td></td>
-                        <td><div class="day-number">1</div></td>
+                        <td><div class="day-number month-start">9/1</div></td>
                         <td><div class="day-number">2</div></td>
                         <td><div class="day-number">3</div></td>
                         <td><div class="day-number">4</div></td>
@@ -117,29 +131,12 @@
                         <td><div class="day-number sun">28</div><div class="event bg-green-200">태신자 작정 종료</div></td>
                         <td><div class="day-number">29</div><div class="event bg-red-200">릴레이 금식 시작</div><div class="event bg-purple-200">행복파티 시작</div></td>
                         <td><div class="day-number">30</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
-                        <td></td><td></td><td></td><td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- 10월 -->
-        <div class="mb-4">
-            <h2 class="text-lg font-bold mb-2 text-center">📅 10월: 기도와 만남</h2>
-            <table class="calendar-table">
-                <thead>
-                    <tr>
-                        <th class="sun">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th class="sat">토</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="3"></td>
-                        <td><div class="day-number">1</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
+                        <td><div class="day-number month-start">10/1</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
                         <td><div class="day-number">2</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
                         <td><div class="day-number">3</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
                         <td><div class="day-number sat">4</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
                     </tr>
+                    <!-- 10월 -->
                     <tr>
                         <td><div class="day-number sun">5</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
                         <td><div class="day-number">6</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
@@ -174,26 +171,9 @@
                         <td><div class="day-number">29</div><div class="event bg-purple-200"></div></td>
                         <td><div class="day-number">30</div><div class="event bg-purple-200"></div></td>
                         <td><div class="day-number">31</div><div class="event bg-purple-200"></div></td>
-                        <td></td>
+                        <td><div class="day-number sat month-start">11/1</div><div class="event bg-purple-200">행복파티 종료</div></td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- 11월 & 12월 -->
-        <div>
-            <h2 class="text-lg font-bold mb-2 text-center">📅 11월 & 12월: 초청과 정착</h2>
-            <table class="calendar-table">
-                <thead>
-                    <tr>
-                        <th class="sun">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th class="sat">토</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="6"></td>
-                        <td><div class="day-number sat">1</div><div class="event bg-purple-200">행복파티 종료</div></td>
-                    </tr>
+                    <!-- 11월 & 12월 -->
                     <tr>
                         <td><div class="day-number sun">2</div><div class="font-bold text-base text-center text-red-600">🎉<br>초청주일</div></td>
                         <td><div class="day-number">3</div><div class="event bg-teal-200">후속조치 시작</div></td>
@@ -206,36 +186,18 @@
                     <tr>
                         <td colspan="7" class="p-0"><div class="event bg-teal-200 text-center py-1">후속조치 진행 (11/3 ~ 12/7)</div></td>
                     </tr>
-                    <tr>
-                        <td><div class="day-number sun">9</div></td>
-                        <td><div class="day-number">10</div></td>
-                        <td><div class="day-number">11</div></td>
-                        <td><div class="day-number">12</div></td>
-                        <td><div class="day-number">13</div></td>
-                        <td><div class="day-number">14</div></td>
-                        <td><div class="day-number sat">15</div></td>
+                     <tr>
+                        <td><div class="day-number sun">...</div></td>
+                        <td><div class="day-number">...</div></td>
+                        <td><div class="day-number">...</div></td>
+                        <td><div class="day-number">...</div></td>
+                        <td><div class="day-number">...</div></td>
+                        <td><div class="day-number">...</div></td>
+                        <td><div class="day-number sat">...</div></td>
                     </tr>
-                    <tr>
-                        <td><div class="day-number sun">16</div></td>
-                        <td><div class="day-number">17</div></td>
-                        <td><div class="day-number">18</div></td>
-                        <td><div class="day-number">19</div></td>
-                        <td><div class="day-number">20</div></td>
-                        <td><div class="day-number">21</div></td>
-                        <td><div class="day-number sat">22</div></td>
-                    </tr>
-                    <tr>
-                        <td><div class="day-number sun">23</div></td>
-                        <td><div class="day-number">24</div></td>
-                        <td><div class="day-number">25</div></td>
-                        <td><div class="day-number">26</div></td>
-                        <td><div class="day-number">27</div></td>
-                        <td><div class="day-number">28</div></td>
-                        <td><div class="day-number sat">29</div></td>
-                    </tr>
-                    <tr>
+                     <tr>
                         <td><div class="day-number sun">30</div></td>
-                        <td><div class="day-number">12/1</div></td>
+                        <td><div class="day-number month-start">12/1</div></td>
                         <td><div class="day-number">2</div></td>
                         <td><div class="day-number">3</div></td>
                         <td><div class="day-number">4</div></td>
