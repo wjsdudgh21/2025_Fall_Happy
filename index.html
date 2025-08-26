@@ -17,25 +17,32 @@
             table-layout: fixed;
             border-collapse: collapse;
         }
-        .calendar-table th, .calendar-table td {
+        /* 날짜 칸(td)의 높이는 유지 */
+        .calendar-table td {
             border: 1px solid #e2e8f0;
             vertical-align: top;
-            height: 65px; /* 칸 높이를 대폭 축소 */
+            height: 65px; 
         }
+        /* 요일 칸(th)의 높이만 줄이고 텍스트를 중앙 정렬 */
         .calendar-table th {
+            border: 1px solid #e2e8f0;
+            vertical-align: middle; /* 세로 중앙 정렬 */
+            text-align: center; /* 가로 중앙 정렬 */
+            height: 30px; /* 높이를 반으로 줄임 */
             font-weight: 500;
-            padding: 4px; /* 패딩 축소 */
+            padding: 4px;
             background-color: #f8fafc;
             font-size: 0.8rem;
         }
         .calendar-table td .day-number {
-            font-size: 0.8rem; /* 날짜 폰트 크기 축소 */
+            font-size: 0.8rem; /* 날짜 폰트 크기 다시 작게 */
             font-weight: 500;
             padding: 2px 4px;
         }
         .event {
-            font-size: 0.65rem; /* 이벤트 폰트 크기 대폭 축소 */
-            line-height: 1.2; /* 줄 간격 조절 */
+            font-size: 0.8rem; /* 이벤트 폰트 크기 키움 */
+            font-weight: 500; /* 약간 굵게 */
+            line-height: 1.3; /* 줄 간격 조절 */
             padding: 2px 4px;
             margin-top: 1px;
             border-radius: 3px;
@@ -102,7 +109,7 @@
                     </tr>
                     <tr>
                         <td><div class="day-number sun">7</div><div class="event bg-blue-200">진군식 시작</div><div class="font-bold text-center text-red-600 text-xs">선포주일</div></td>
-                        <td><div class="day-number">8</div><div class="event bg-blue-200"></div><div class="event bg-green-200">대심방 및 태신자 작정 시작</div></td>
+                        <td><div class="day-number">8</div><div class="event bg-blue-200"></div><div class="event bg-green-200">대심방/태신자 작정 시작</div></td>
                         <td><div class="day-number">9</div><div class="event bg-blue-200"></div><div class="event bg-green-200"></div></td>
                         <td><div class="day-number">10</div><div class="event bg-blue-200"></div><div class="event bg-green-200"></div></td>
                         <td><div class="day-number">11</div><div class="event bg-blue-200"></div><div class="event bg-green-200"></div></td>
@@ -128,7 +135,7 @@
                         <td><div class="day-number sat">27</div><div class="event bg-green-200"></div></td>
                     </tr>
                     <tr>
-                        <td><div class="day-number sun">28</div><div class="event bg-green-200">대심방 및 태신자 작정 종료</div></td>
+                        <td><div class="day-number sun">28</div><div class="event bg-green-200">대심방/태신자 작정 종료</div></td>
                         <td><div class="day-number">29</div><div class="event bg-red-200">릴레이 금식 기도 시작</div><div class="event bg-purple-200">행복파티 시작</div></td>
                         <td><div class="day-number">30</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
                         <td><div class="day-number month-start">10/1</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
@@ -157,11 +164,11 @@
                     </tr>
                     <tr>
                         <td><div class="day-number sun">19</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div></td>
-                        <td><div class="day-number">20</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300 font-semibold">특별 새벽 기도회</div></td>
-                        <td><div class="day-number">21</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300 font-semibold">특새</div></td>
-                        <td><div class="day-number">22</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300 font-semibold">특새</div></td>
-                        <td><div class="day-number">23</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300 font-semibold">특새</div></td>
-                        <td><div class="day-number">24</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300 font-semibold">특새</div></td>
+                        <td><div class="day-number">20</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300">특새 시작</div></td>
+                        <td><div class="day-number">21</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300">특새</div></td>
+                        <td><div class="day-number">22</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300">특새</div></td>
+                        <td><div class="day-number">23</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300">특새</div></td>
+                        <td><div class="day-number">24</div><div class="event bg-red-200"></div><div class="event bg-purple-200"></div><div class="event bg-pink-300">특새 종료</div></td>
                         <td><div class="day-number sat">25</div><div class="event bg-red-200">릴레이 금식 기도 종료</div><div class="event bg-purple-200"></div></td>
                     </tr>
                     <tr>
